@@ -1,0 +1,31 @@
+#squares div {
+    /* these styles will let the divs line up next to each other
+       while accepting dimensions */
+    display: block;
+    float: left;
+
+    width: 150px;
+    height: 150px;
+    /* background: orange; */
+
+    /* a small margin to separate the blocks */
+    margin-right: 10px;
+
+    text-align: center;
+	font-weight: bold;
+	font-size: 300%;
+	font-family: "Segoe UI";
+	position: relative;
+}
+
+#topText {
+  font-family: "Segoe UI";
+  font-size: 130%;
+  font-weight: bold;
+}
+
+.par {
+  display: block;
+  float: left;
+  width : 120px;    
+}

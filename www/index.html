@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Blank App</title>
+         <link rel="stylesheet" href="index.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+       <!-- <script type="text/javascript" src="cordova.js"></script> -->
+
+<p id="topText">Fries&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; Sweet fries&emsp;&emsp;&nbsp;&nbsp;Wings&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;Tenders</p>
+  <div id="squares">
+    <div id="friesDiv"><p id="numberFries" class="squareNumbers"></p></div>
+  <div id="sweetDiv"><p id="numberSweet" class="squareNumbers"></div>
+   <div id="wingsDiv"><p id="numberWings" class="squareNumbers"></div>
+    <div id="tendersDiv"><p id="numberTenders" class="squareNumbers"></div>
+</div>    
+
+
+
+<script>
+function validateForm() {
+  var x = document.forms["friesNumber"].value;
+  if (x == "") {
+    alert("Number must be filled out");
+    return false;
+  }
+ } 
+ </script>
+<div id="forms">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+  <p class="par">Fries:  <input type="number" id="friesNumber" class="box" name="friesNumber" onchange="save()">
+ 	 <input type="submit" id="submit"></p>
+ <p class="par">Sweet: <input type="number" id="sweetNumber" class="box" name="sweetNumber" onchange="saveSweet()">
+ 	 <input type="submit" id="submit"></p>
+ <p class="par">Wings: <input type="number" id="wingsNumber" class="box" name="wingsNumber" onchange="saveWings()">
+ 	 <input type="submit" id="submit"></p>
+ <p class="par">Tenders: <input type="number" id="tendersNumber" class="box" name="tendersNumber" onchange="saveTenders()">
+ 	 <input type="submit" id="submit"></p>
+</p>
+
+
+<script>
+function save() {
+      var numberFries;
+      var friesNumber = document.getElementById("friesNumber").value;
+      document.getElementById("numberFries").innerHTML = friesNumber;
+     document.getElementById('friesNumber').value='';
+
+    var numberFries1 = parseInt($('#numberFries').text().trim());
+    var color = 'red';
+    if (!isNaN(numberFries1)) {
+        if (numberFries1 >= 7) {
+            color = 'darkorange';
+        }
+        if (numberFries1 <= 3) {
+            color = 'limegreen';
+        }
+        if (numberFries1 >= 4) {
+            color = 'orange';
+        }
+        if (numberFries1 >= 10) {
+            color = 'red';
+        }
+        $('#friesDiv').css('background', color);
+    }
+
+}
+
+function saveSweet() {
+      var numberSweet;
+      var sweetNumber = document.getElementById("sweetNumber").value;
+      document.getElementById("numberSweet").innerHTML = sweetNumber;
+     document.getElementById('sweetNumber').value='';
+
+    var numberSweet1 = parseInt($('#numberSweet').text().trim());
+    var color = 'red';
+    if (!isNaN(numberSweet1)) {
+        if (numberSweet1 >= 7) {
+            color = 'darkorange';
+        }
+        if (numberSweet1 <= 3) {
+            color = 'limegreen';
+        }
+        if (numberSweet1 >= 4) {
+            color = 'orange';
+        }
+        if (numberSweet1 >= 10) {
+            color = 'red';
+        }
+        $('#sweetDiv').css('background', color);
+    }
+
+}
+
+function saveWings() {
+      var numberWings;
+      var wingsNumber = document.getElementById("wingsNumber").value;
+      document.getElementById("numberWings").innerHTML = wingsNumber;
+     document.getElementById('wingsNumber').value='';
+
+    var numberWings1 = parseInt($('#numberWings').text().trim());
+    var color = 'red';
+    if (!isNaN(numberWings1)) {
+        if (numberWings1 >= 7) {
+            color = 'darkorange';
+        }
+        if (numberWings1 <= 3) {
+            color = 'limegreen';
+        }
+        if (numberWings1 >= 4) {
+            color = 'orange';
+        }
+        if (numberWings1 >= 10) {
+            color = 'red';
+        }
+        $('#wingsDiv').css('background', color);
+    }
+
+}
+
+function saveTenders() {
+      var numberTenders;
+      var tendersNumber = document.getElementById("tendersNumber").value;
+      document.getElementById("numberTenders").innerHTML = tendersNumber;
+     document.getElementById('tendersNumber').value='';
+
+    var numberTenders1 = parseInt($('#numberTenders').text().trim());
+    var color = 'red';
+    if (!isNaN(numberTenders1)) {
+        if (numberTenders1 >= 7) {
+            color = 'darkorange';
+        }
+        if (numberTenders1 <= 3) {
+            color = 'limegreen';
+        }
+        if (numberTenders1 >= 4) {
+            color = 'orange';
+        }
+        if (numberTenders1 >= 10) {
+            color = 'red';
+        }
+        $('#tendersDiv').css('background', color);
+    }
+
+}
+</script>
+</p>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>
